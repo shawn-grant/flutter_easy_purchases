@@ -29,6 +29,8 @@ class EasyPurchaser {
   });
 
   Future<void> init() async {
+    log('initializing easy purchases');
+
     final bool available = await _inAppPurchase.isAvailable();
     if (!available) {
       storeAvailable = false;

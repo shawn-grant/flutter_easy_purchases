@@ -1,4 +1,7 @@
 # Easy Purchases
+![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=ios&logoColor=white)
+
 An easy to use package for handling purchases in your flutter app.
 Uses the `in_app_purchase` package under the hood.
 
@@ -40,5 +43,10 @@ await purchaser.init();
 
 ### Making a purchase
 ```dart
+// purchasing non-consumable items
 await purchaser.buyItem('product_id_1');
+// purchasing consumable items
+await purchaser.buyItem('product_id_2', consumable: true);
+// purchasing subscriptions
+await purchaser.buySubscription('product_id_3');
 ```

@@ -2,6 +2,7 @@ name: easy_purchases
 description: "An easy-to-use wrapper for in_app_purchase."
 version: 0.0.1
 homepage: https://github.com/shawn-grant/flutter_easy_purchases
+repository: https://github.com/shawn-grant/flutter_easy_purchases
 
 environment:
   sdk: '>=3.2.2 <4.0.0'

@@ -5,10 +5,12 @@ import 'package:easy_purchases/easy_purchases.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  
-  test('check availability', () {
-    EasyPurchaser.productIds = {'product_id_1', 'product_id_2'};
+  // set product ids
+  EasyPurchaser.productIds = {'product_id_1', 'product_id_2'};
+
+  test('check availability', () async {
     final easyPurchases = EasyPurchaser();
+    await easyPurchases.init();
     expect(easyPurchases.storeAvailable, false);
   });
 }
